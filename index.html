@@ -94,7 +94,7 @@ text-align: left;
         <button type="button" onclick="BMI()"> Calculation </button>
         <br>
         <br>
-        <h2 id="show_here"> The Day is... </h2>
+        <h2 id="show_here"> You are... </h2>
 
 
 
@@ -102,28 +102,30 @@ text-align: left;
 
         function BMI() {
 
-     var W = document. getElementById('ffr')
+     var W = Number(document.getElementById("W").value);
 
-     if(W >= '18.5' ){
-     	document. getElementById("show_here").innerHTML = "You are under weight.";}
+     if(W <= '18.5' ){
+     	document. getElementById("show_here").innerHTML = "You are under weight";}
 
-     else if (W == 'KFC'){
-     	getElementById("show_here").innerHTML = "You are helthy weight";
-     }
+     if(W <= '24.5'){
+     	getElementById("show_here").innerHTML = "You are helthy weight";}
 
-     else if (W == 'Mcdo'){
+     if(W <= '29.9'){
      	getElementById("show_here").innerHTML = "You are over weight" ;
      }
 
 
-    else if (W == 'Popeyes'){
+     if (W >= '30'){
         getElementById("show_here").innerHTML = "you are obese" ;}
 
     else {document.getElementById("show_here").innerHTML = "Invalid Output";}
-       </script>
-
-        </div>
+    
 
 
+    }
+
+</script>
+
+</div>
 </body>
 </html>
