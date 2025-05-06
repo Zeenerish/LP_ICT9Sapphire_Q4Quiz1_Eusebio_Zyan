@@ -100,29 +100,25 @@ text-align: left;
 
 <script>
 
-        function BMI() {
+     function BMI(){
 
-     var W = Number(document.getElementById("W").value);
+var W = document.getElementById("kg").value; //get value from 1st input
 
-     if(W <= '18.5' ){
-     	document. getElementById("show_here").innerHTML = "You are under weight";}
+var H = document.getElementById("met").value; //get value from 2nd input
 
-     if(W <= '24.5'){
-     	getElementById("show_here").innerHTML = "You are helthy weight";}
-
-     if(W <= '29.9'){
-     	getElementById("show_here").innerHTML = "You are over weight" ;
-     }
+var result = Math.round((weight / Math.pow(height, 2))); //use the BMI formula; use Math.pow to square the height and Math. round for decimal
 
 
-     if (W >= '30'){
-        getElementById("show_here").innerHTML = "you are obese" ;}
+//use conditional statement to determine the BMI category
+if(result < 18.5){
 
-    else {document.getElementById("show_here").innerHTML = "Invalid Output";}
-    
+document.getElementById("display").innerHTML = "BMI : " + BMI + " | You are underweight. Eat more!";
+}
 
+if(result < 40){
 
-    }
+document.getElementById("display").innerHTML = "BMI : " + BMI + " | You are overweight. Eat less!";
+}
 
 </script>
 
